@@ -30,8 +30,8 @@ def log_variation():
             speed = devcycle_client.variable_value(SERVICE_USER, 'togglebot-speed', 'off')
 
             spin_chars = "◟◜◝◞" if speed == 'slow' else "◜◠◝◞◡◟"
-            spinner = '○' if speed == 'off' else spin_chars[idx]
-            idx = (idx + 1) % len(spin_chars)
+            spinner = '○' if speed == 'off' else spin_chars[idx % len(spin_chars)]
+            idx += 1
 
             face = '(- ‿ ○)' if wink else '(○ ‿ ○)'
 
