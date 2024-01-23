@@ -26,7 +26,5 @@ urlpatterns = [
 
 is_runserver = any(arg.casefold() == "runserver" for arg in sys.argv)
 if (is_runserver):
-    print('Starting development server at http://127.0.0.1:8000/')
-    print('Quit the server with CONTROL-C.')
     log_variation()
 
