@@ -1,5 +1,6 @@
 import sys
 import time
+import threading
 from devcycle_python_sdk.models.user import DevCycleUser
 from .devcycle import get_devcycle_client
 
@@ -40,12 +41,14 @@ def log_variation():
             write_to_console(frame, color)
 
             timeout = 100 if speed in ['fast', 'surprise', 'off-axis'] else 500
-            
-        time.sleep(timeout / 1000)
-        render_frame(idx)
+
+        # Set timeout to render next frame
+        threading.Timer(
+            timeout / 1000,
+            lambda: render_frame(idx)
+        ).start()
 
     try:
-        print('{}------------------------------------------{}'.format(COLORS['blue'], END_CHAR))
         render_frame()
     except KeyboardInterrupt:
         sys.stdout.write('\n')
