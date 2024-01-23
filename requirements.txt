@@ -1,0 +1,3 @@
+django >= 4.2
+devcycle-python-server-sdk
+python-dotenv
