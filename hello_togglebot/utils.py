@@ -74,4 +74,4 @@ def add_color(text, color):
 
 def write_to_console(frame, color):
     frame = add_color(frame, color)
-    sys.stdout.write('\r\x1b[K' + frame)
+    sys.stdout.write('\x1b[K  ' + frame + '\r')
