@@ -5,6 +5,13 @@ An example app built using the [DevCycle Python Server SDK](https://docs.devcycl
 
 Python 3.7+ and Django 4.2+
 
+## Creating a Demo Feature
+This example app requires that your project has a feature with the expected variables, as well as some simple targeting rules. 
+
+#### ⇨ [Click here](https://app.devcycle.com/r/create?resource=feature&key=hello-togglebot) to automatically create the feature in your project ⇦
+
+When you run the example app and switch your identity between users, you'll be able to see the feature's different variations.
+
 ## Running the Example
 ### Setup
 
